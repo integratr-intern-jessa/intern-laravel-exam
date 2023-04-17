@@ -3,6 +3,7 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProductController;
+use App\Models\Product;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,6 +17,7 @@ use App\Http\Controllers\ProductController;
 */
 
 Route::get('/products', [ProductController::class, 'index']);
+Route::get('/post/create{id}', [ProductController::class, 'create']);
 Route::post('/products', [ProductController::class, 'store']);
 Route::get('/products/{id}',[ProductController::class, 'show']);
 Route::put('/products/{id}',[ProductController::class, 'update']);

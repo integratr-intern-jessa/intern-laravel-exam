@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Models\Product;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -16,3 +18,11 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+// Route::get('/', function () {
+//     $products = Product::all()->sortAsc();
+//     return view('index', [
+//         'products' => $products,
+//         'lists' => Product::all()
+//     ]);
+// });
